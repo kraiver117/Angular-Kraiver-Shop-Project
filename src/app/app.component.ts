@@ -9,10 +9,10 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class AppComponent {
   title = 'kraiver-store';
-  
-  item= ['Angel','Lupita','Helio'];
+  item = ['Angel', 'Lupita', 'Helio'];
+  power = 10;
 
-  products: Product[]=[
+  products: Product[] = [
     {
       id: '1',
       image: 'assets/images/camiseta.png',
@@ -61,7 +61,12 @@ export class AppComponent {
     this.item.push('Nuevo item');
   }
 
-  deleteItem(index:number){
+  deleteItem(index: number){
     this.item.splice(index);
+  }
+
+  clickProduct(id: number){
+    console.log('product');
+    console.log(id);
   }
 }

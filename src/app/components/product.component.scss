@@ -1,0 +1,12 @@
+//El host aplica el estilo a todo el elemento padre
+:host{
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    
+}
