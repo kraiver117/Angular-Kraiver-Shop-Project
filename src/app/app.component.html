@@ -1,45 +1,4 @@
-<input type="text" [(ngModel)]="title" >
-
-{{title}}
-
-<input type="text" [(ngModel)]="power">
-{{power | exponential}}
-
-<div *ngIf="title==='Angel'">
-  Esto es Angel
-</div>
-
-<div *ngIf="title==='Julian'">
-  Este es Julian
-</div>
-
-<div *ngIf="title==='Nicolas'">
-  Este es Nicolas
-</div>
+<router-outlet></router-outlet>
 
 
-<div [ngSwitch]="title">
-<p *ngSwitchCase="'Angel'">Hola soy Angel</p>
-<p *ngSwitchCase="'Julian'">Hola soy Julian</p>
-<p *ngSwitchCase="'Nicolas'">Hola soy Nicolas</p>
-<p *ngSwitchDefault>No hay match</p>
-</div>
 
-<button (click)="addItem()">Add Item</button>
-
-<ul>
-  <li *ngIf="item.length===0">La lista esta vacia</li>
-  <li *ngFor="let name of item; index as i">
-    {{name}} {{i+1}}
-    <button (click)="deleteItem(i)">Delete</button>
-  </li>
-  
-</ul>
-
-<div class="product-grid">
-  <app-product 
-    *ngFor="let product of products" 
-    (productClicked)="clickProduct($event)"  
-    [product]="product">
-</app-product>
-</div>
